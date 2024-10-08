@@ -1,6 +1,6 @@
 FROM alpine/git as clone
 WORKDIR /app
-RUN git clone https://github.com/dltpals222/PKI_Cert.git .
+RUN git clone https://github.com/dltpals222/prac_yaml.git .
 
 FROM node:14
 WORKDIR /app
