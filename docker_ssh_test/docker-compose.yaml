@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  ssh-server:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - PASSWORD=1234
+        - BRANCH=dev
+        - REPO_URL=https://oauth2:@gitlab.mipllab.com/rnd/rnd-web.git
+    container_name: ssh-test
+    ports:
+      - "2222:22"
+    restart: always
+    volumes:
+      - /c/Users/lw/ssh:/root/.ssh

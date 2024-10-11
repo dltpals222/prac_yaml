@@ -1,0 +1,13 @@
+services:
+  app:
+    build: 
+      context: .
+      args:
+        - REPO_URL=git@gitlab.mipllab.com:lw/kiwi-dev.git
+        - BRANCH=dev
+        - SSH_PRIVATE_KEY=${SSH_PRIVATE_KEY}
+    container_name: kiwi-dev
+    ports:
+      - "4567:4567"
+    environment:
+      - NODE_ENV=production

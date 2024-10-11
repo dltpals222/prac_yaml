@@ -1,0 +1,1 @@
+export const gitlabAccessToken = process.env
