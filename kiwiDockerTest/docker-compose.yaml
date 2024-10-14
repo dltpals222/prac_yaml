@@ -1,0 +1,8 @@
+version: '3'
+services:
+  dood-service:
+    build: .
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - .:/app
+    command: sh your_script.sh

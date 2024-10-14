@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   ssh-server:
     build: 
@@ -13,5 +11,3 @@ services:
     ports:
       - "2222:22"
     restart: always
-    volumes:
-      - /c/Users/lw/ssh:/root/.ssh
