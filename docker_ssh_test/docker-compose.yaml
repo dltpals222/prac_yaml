@@ -6,7 +6,7 @@ services:
       args:
         - PASSWORD=1234
         - BRANCH=dev
-        - REPO_URL=https://oauth2:@gitlab.mipllab.com/rnd/rnd-web.git
+        - REPO_URL=https://oauth2:${PRIVATE_TOKEN}@gitlab.mipllab.com/rnd/rnd-web.git # .env에서 토큰 가져오기
     container_name: ssh-test
     ports:
       - "2222:22"
