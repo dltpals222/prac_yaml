@@ -1,8 +1,9 @@
 const axios = require('axios');
-const { gitlabAccessToken } = require('../config');
+
+require('dotenv').config();
 
 const GITLAB_URL = "https://gitlab.mipllab.com/api/v4";
-const PRIVATE_TOKEN = gitlabAccessToken;
+const PRIVATE_TOKEN = process.env.PRIVATE_TOKEN;
 
 const headers = { "PRIVATE-TOKEN": PRIVATE_TOKEN };
 
